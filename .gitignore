@@ -7,3 +7,11 @@ venv/
 .venv/
 *.keystore
 *.jks
+
+# Store-asset script output (regenerate with tools/store-assets)
+tools/store-assets/raw/
+tools/store-assets/video/
+tools/store-assets/build/
+tools/store-assets/PlayStoreAssets/
+tools/store-assets/kivyhome_*/
+tools/store-assets/*.mp4

@@ -1,19 +1,19 @@
 [app]
 title = StringWise Cello
-# Package id = package.domain + "." + package.name = golemapps.stringwise.app
-# This must never change: it is the id of the existing Play Store listing.
-package.name = app
-package.domain = golemapps.stringwisecello
+# Package id = package.domain + "." + package.name = golemapps.stringwisecello
+# This must never change: it is the id registered for the app in Play Console.
+package.name = stringwisecello
+package.domain = golemapps
 
 source.dir = .
 source.include_exts = py,png,jpg,jpeg,ttf,txt
 source.exclude_dirs = tests, buildconfig, docs, bin, venv, .venv, .buildozer, .github, .git, __pycache__
 
 # Shown to users in the Play Store.
-version = 1.1.0
+version = 1.1.1
 # Play's version code. Raise it by at least 1 for every upload, and keep it
 # higher than any code you have already used for this app.
-android.numeric_version = 2
+android.numeric_version = 3
 
 # charset_normalizer is not used by the app. It is listed so the build tool
 # treats it as an ordinary module; left to itself it picks an Android-only

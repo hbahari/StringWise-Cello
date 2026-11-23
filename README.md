@@ -82,7 +82,7 @@ Never commit the keystore itself. `.gitignore` already excludes `*.keystore` and
 ### Before each upload
 
 In `buildozer.spec`, raise `android.numeric_version` by at least 1 and update `version`.
-The package id, `golemapps.stringwisecello.app`, must stay as it is once the app is on Google Play.
+The package id, `golemapps.stringwisecello`, must stay as it is: it is the id registered for the app in Play Console.
 
 ## Photos of hand positions
 
@@ -103,3 +103,23 @@ and the change made for each item.
 
 Headings are set in Crimson Text (SIL Open Font License, see `stringwise/assets/fonts/`).
 Traditional tunes are simplified arrangements; the other studies were written for this course.
+
+## Store assets
+
+`tools/store-assets/` makes the whole Google Play graphics set by running the real app
+headless and feeding it simulated playing: feature graphic, 512 px icon, eight screenshots
+each for phone, 7-inch and 10-inch tablet, Chromebook and Android XR, and a ~51 s
+walkthrough video with music from the app's own pieces. It needs Linux with xvfb, ffmpeg,
+Kivy, numpy and Pillow.
+
+```
+cd tools/store-assets
+xvfb-run -a -s "-screen 0 1700x2900x24" python3 stills.py 1080 1920 3 raw/phone
+xvfb-run -a -s "-screen 0 1700x2900x24" python3 stills.py 1200 2132 2 raw/tab7
+xvfb-run -a -s "-screen 0 1700x2900x24" python3 stills.py 1600 2844 2 raw/tab10
+python3 compose.py
+xvfb-run -a -s "-screen 0 1300x1400x24" python3 film.py
+python3 build_video.py build
+```
+
+The listing text is in `docs/STORE_LISTING.md`.

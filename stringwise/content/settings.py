@@ -1,7 +1,7 @@
 """Text and links for the Settings screen."""
 
 SUPPORT_EMAIL = "golemapps1@gmail.com"
-PACKAGE = "golemapps.stringwisecello.app"
+PACKAGE = "golemapps.stringwisecello"
 STORE_APP_LINK = f"market://details?id={PACKAGE}"
 STORE_WEB_LINK = f"https://play.google.com/store/apps/details?id={PACKAGE}"
 PRIVACY_LINK = "https://github.com/hbahari/StringWise-Cello/blob/main/PRIVACY_POLICY.md"

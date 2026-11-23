@@ -39,7 +39,7 @@ def test_the_words_are_for_the_cello():
 def test_share_message_points_at_the_cello_listing():
     from stringwise.content import settings
     assert "learning cello" in settings.SHARE_MESSAGE
-    assert settings.SHARE_MESSAGE.endswith("id=golemapps.stringwisecello.app")
+    assert settings.SHARE_MESSAGE.endswith("id=golemapps.stringwisecello")
 
 
 def test_count_only_counts_spotlit_steps():

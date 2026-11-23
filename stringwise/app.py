@@ -138,10 +138,15 @@ class Shell(BoxLayout):
         self.bind(pos=self._redraw, size=self._redraw)
 
         header = BoxLayout(size_hint_y=None, height=dp(52), padding=(0, 0, dp(6), 0), spacing=dp(2))
-        name = Label(text="StringWise [size=16sp]Cello[/size]", markup=True,
-                     font_name=theme.FONT_HEAD, font_size=sp(23),
-                     color=rgba(theme.CREAM), halign="left", valign="middle", padding=(dp(14), 0))
-        name.bind(size=lambda widget, size: setattr(widget, "text_size", size))
+        # Two lines on purpose: on a 360 dp phone there is no room for "StringWise Cello"
+        # on one line beside the title-bar metronome.
+        name = BoxLayout(orientation="vertical", padding=(dp(14), dp(6), 0, dp(5)))
+        for text, size, colour, height, valign in (("StringWise", 22, theme.CREAM, 25, "bottom"),
+                                                   ("Cello", 14, theme.ON_WOOD_SOFT, 16, "top")):
+            line = Label(text=text, font_name=theme.FONT_HEAD, font_size=sp(size), color=rgba(colour),
+                         halign="left", valign=valign, size_hint_y=None, height=dp(height))
+            line.bind(size=lambda widget, size: setattr(widget, "text_size", size))
+            name.add_widget(line)
         header.add_widget(name)
         self.header_metronome = HeaderMetronome(app.metronome)
         header.add_widget(self.header_metronome)
