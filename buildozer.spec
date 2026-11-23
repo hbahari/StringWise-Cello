@@ -13,7 +13,7 @@ source.exclude_dirs = tests, buildconfig, docs, bin, venv, .venv, .buildozer, .g
 version = 1.1.1
 # Play's version code. Raise it by at least 1 for every upload, and keep it
 # higher than any code you have already used for this app.
-android.numeric_version = 3
+android.numeric_version = 4
 
 # charset_normalizer is not used by the app. It is listed so the build tool
 # treats it as an ordinary module; left to itself it picks an Android-only
