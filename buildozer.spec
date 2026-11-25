@@ -10,10 +10,10 @@ source.include_exts = py,png,jpg,jpeg,ttf,txt
 source.exclude_dirs = tests, buildconfig, docs, bin, venv, .venv, .buildozer, .github, .git, __pycache__
 
 # Shown to users in the Play Store.
-version = 1.1.1
+version = 1.2.0
 # Play's version code. Raise it by at least 1 for every upload, and keep it
 # higher than any code you have already used for this app.
-android.numeric_version = 4
+android.numeric_version = 5
 
 # charset_normalizer is not used by the app. It is listed so the build tool
 # treats it as an ordinary module; left to itself it picks an Android-only

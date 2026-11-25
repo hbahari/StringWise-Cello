@@ -56,11 +56,17 @@ Community report of 22 November 2026.
 | Play Console rejected the app bundle: the app was registered as golemapps.stringwisecello, but the build was named golemapps.stringwisecello.app. | Play Console | The build now uses golemapps.stringwisecello, matching Play Console. The Share button's store link uses the same id. |
 | The app had no store listing or store graphics. | Device testing | Wrote the Google Play listing (docs/STORE_LISTING.md) and made the feature graphic, store icon, screenshots for phone, tablets, Chromebook and Android XR, and a walkthrough video, all from the running app. |
 
+## 24 November 2026 (version 1.2.0)
+
+| Feedback | Source | What changed |
+| --- | --- | --- |
+| The phone screen dims or locks while playing a piece, so you have to put the bow down and tap it. | From StringWise (violin) | Added Keep the screen on to Settings, with an on/off switch. While it is on, the screen stays awake the whole time StringWise Cello is open. It is off by default because it uses more battery. The screen still stays on while the app is listening, as before. |
+
 ---
 
 ## Still to do
 
 - Check the tuner, the finger check and Record and Check with a real cello on several
   phones, especially the C string.
-- Check the tour and the share menu on a real phone.
+- Check the tour, the share menu and Keep the screen on with a real phone.
 - Photos of real cello hand positions for the Fingers tab.

@@ -27,6 +27,10 @@ SHARE_MESSAGE = ("I'm learning cello with StringWise Cello, a free twelve-week c
 SHARE_COPIED = "The link has been copied. Paste it into a message to share it."
 SHARE_FAILED = "Sharing isn't available on this device."
 
+SCREEN_TITLE = "Screen"
+SCREEN_ON = "Keep the screen on"
+SCREEN_HINT = "Uses more battery."
+
 PROGRESS_TITLE = "Progress"
 PROGRESS_TEXT = ("Clears your lesson ticks, completed weeks, saved tempos and finished rhythms, "
                  "and goes back to week 1. Your settings are kept.")
